@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- {{TITLE}} 와 {{SLUG}} 을 새 작품에 맞게 바꾸세요 -->
+  <title>{{TITLE}} · 지성민의 포털</title>
+  <meta name="description" content="{{TITLE}}" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{TITLE}} · 지성민의 포털" />
+  <meta property="og:description" content="{{TITLE}}" />
+  <meta property="og:image" content="https://ta0110.github.io/my-portal/assets/images/og-default.png" />
+  <meta property="og:url" content="https://ta0110.github.io/my-portal/works/{{SLUG}}/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://ta0110.github.io/my-portal/works/{{SLUG}}/" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script defer src="/assets/js/include.js"></script>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main class="container">
+    <div class="prose">
+      <a class="back-link" href="/works/">← 작품 목록</a>
+      <h1>{{TITLE}}</h1>
+
+      <!-- 여기에 작품 본문을 자유롭게 작성하세요 (HTML/CSS/JS 자유) -->
+      <p>작품 내용을 여기에 채우세요.</p>
+    </div>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

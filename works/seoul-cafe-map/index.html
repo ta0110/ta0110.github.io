@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>안녕! 첫 작품 · 지성민의 포털</title>
+  <meta name="description" content="버튼을 누르면 격려 메시지가 나오는 1분짜리 인터랙티브 데모" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="안녕! 첫 작품 · 지성민의 포털" />
+  <meta property="og:description" content="버튼을 누르면 격려 메시지가 나오는 1분짜리 인터랙티브 데모" />
+  <meta property="og:image" content="https://ta0110.github.io/my-portal/assets/images/og-default.png" />
+  <meta property="og:url" content="https://ta0110.github.io/my-portal/works/seoul-cafe-map/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://ta0110.github.io/my-portal/works/seoul-cafe-map/" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script defer src="/assets/js/include.js"></script>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main class="container">
+    <div class="prose">
+      <a class="back-link" href="/works/">← 작품 목록</a>
+      <h1>안녕! 첫 작품 👋</h1>
+      <p class="post-meta">2026-05-25 · interactive · demo</p>
+
+      <p>
+        이건 포털이 어떻게 동작하는지 감을 잡으라고 만든 아주 작은 데모예요.
+        아래 버튼을 눌러보세요. 누를 때마다 응원 한마디가 나옵니다.
+      </p>
+
+      <div class="center" style="margin:40px 0">
+        <button id="cheer-btn" class="btn" type="button">오늘의 한마디 받기</button>
+        <p id="cheer-msg" style="margin-top:24px;font-size:1.25rem;min-height:1.5em"></p>
+      </div>
+
+      <h2>이 페이지를 내 작품으로 바꾸려면</h2>
+      <p>
+        이 폴더(<code>works/seoul-cafe-map/</code>)의 <code>index.html</code> 을
+        원하는 내용으로 자유롭게 채우면 됩니다. 인터랙티브 데모, 차트, 지도 등
+        무엇이든 순수 HTML/CSS/JS 로 넣을 수 있어요. 상단 헤더와 하단 푸터는 자동으로 붙습니다.
+      </p>
+      <p>
+        Claude Code 로 운영할 때는 <code>"새 작품 추가해줘"</code> 라고만 말하면
+        새 폴더와 카드가 자동으로 만들어집니다.
+      </p>
+    </div>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+
+  <script>
+    (function () {
+      var msgs = [
+        '오늘 하루도 충분히 잘하고 있어요. 🌱',
+        '작은 한 걸음이 결국 멀리 데려다줍니다.',
+        '데이터처럼, 당신의 노력도 쌓이고 있어요. 📈',
+        '완벽하지 않아도 괜찮아요. 계속하는 게 중요해요.',
+        '잠깐의 휴식도 생산성의 일부예요. ☕',
+        '호기심을 잃지 않는 한, 계속 성장합니다.'
+      ];
+      var btn = document.getElementById('cheer-btn');
+      var out = document.getElementById('cheer-msg');
+      btn.addEventListener('click', function () {
+        out.textContent = msgs[Math.floor(Math.random() * msgs.length)];
+        out.style.color = 'var(--accent)';
+      });
+    })();
+  </script>
+</body>
+</html>

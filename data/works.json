@@ -1,0 +1,14 @@
+{
+  "works": [
+    {
+      "slug": "seoul-cafe-map",
+      "title": "안녕! 첫 작품",
+      "description": "버튼을 누르면 격려 메시지가 나오는 1분짜리 인터랙티브 데모입니다.",
+      "thumbnail": "/works/seoul-cafe-map/thumb.jpg",
+      "tags": ["interactive", "demo"],
+      "date": "2026-05-25",
+      "featured": true,
+      "external_url": null
+    }
+  ]
+}

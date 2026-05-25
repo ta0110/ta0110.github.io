@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>이 사이트를 만든 이야기 · 지성민의 포털</title>
+  <meta name="description" content="이 포털이 어떻게 만들어졌는지, 그리고 Claude Code로 어떻게 운영하는지 소개합니다." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="이 사이트를 만든 이야기 · 지성민의 포털" />
+  <meta property="og:description" content="이 포털이 어떻게 만들어졌는지, 그리고 Claude Code로 어떻게 운영하는지 소개합니다." />
+  <meta property="og:image" content="https://ta0110.github.io/my-portal/assets/images/og-default.png" />
+  <meta property="og:url" content="https://ta0110.github.io/my-portal/notes/2026-05-25-hello/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://ta0110.github.io/my-portal/notes/2026-05-25-hello/" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script defer src="/assets/js/include.js"></script>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main class="container">
+    <article class="prose">
+      <a class="back-link" href="/notes/">← 노트 목록</a>
+      <h1>이 사이트를 만든 이야기</h1>
+      <p class="post-meta">2026-05-25 · thoughts · meta</p>
+
+      <p>
+        이 포털은 빌드 도구도, 프레임워크도, 복잡한 설정도 없이 만들어졌습니다.
+        순수한 HTML, CSS, 약간의 JavaScript. 그게 전부예요. 그래서 가볍고,
+        고장 날 일이 적고, 무료로 영원히 호스팅됩니다.
+      </p>
+
+      <h2>어떻게 동작하나요</h2>
+      <p>
+        모든 콘텐츠(작품·노트·링크·프로필)는 <code>data/</code> 폴더의
+        JSON 파일에 들어 있습니다. 페이지는 이 JSON 을 읽어서 카드와 목록을
+        자동으로 그립니다. 그래서 새 글을 추가할 때 디자인을 건드릴 필요가 없어요.
+        JSON 에 한 줄 추가하면 끝입니다.
+      </p>
+      <p>
+        공통 헤더와 푸터는 <code>partials/</code> 의 조각을 모든 페이지가
+        불러와 붙입니다. 디자인 톤(색·폰트·간격)은 <code>assets/css/theme.css</code>
+        의 CSS 변수 한 곳에서만 바꾸면 사이트 전체에 반영됩니다.
+      </p>
+
+      <h2>Claude Code 로 운영하기</h2>
+      <p>
+        이 폴더를 Claude Code 로 열면 레포 안의 <code>CLAUDE.md</code> 를
+        자동으로 읽습니다. 그래서 기술 용어 없이 자연어로 이렇게 말하면 됩니다:
+      </p>
+      <ul>
+        <li><strong>"새 작품 추가해줘"</strong> — 작품 폴더와 갤러리 카드를 만들어 줍니다.</li>
+        <li><strong>"새 노트 쓸래"</strong> — 오늘 날짜로 글 페이지를 만들어 줍니다.</li>
+        <li><strong>"지금 작업 발행해줘"</strong> — 변경사항을 인터넷에 올립니다.</li>
+        <li><strong>"색상 톤을 바꿔줘"</strong> — 테마 색을 한 번에 바꿔 줍니다.</li>
+      </ul>
+
+      <p>
+        앞으로 이 노트 자리에 여러분의 생각, 기록, 분석 이야기를 채워가면 됩니다.
+        환영합니다! 🎉
+      </p>
+    </article>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

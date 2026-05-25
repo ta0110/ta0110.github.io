@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>작품 · 지성민의 포털</title>
+  <meta name="description" content="지성민의 작품 갤러리" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="작품 · 지성민의 포털" />
+  <meta property="og:description" content="지성민의 작품 갤러리" />
+  <meta property="og:image" content="https://ta0110.github.io/my-portal/assets/images/og-default.png" />
+  <meta property="og:url" content="https://ta0110.github.io/my-portal/works/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://ta0110.github.io/my-portal/works/" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script defer src="/assets/js/include.js"></script>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main class="container">
+    <div class="section-head">
+      <h2>작품</h2>
+    </div>
+
+    <!-- 태그 필터 칩 (클라이언트사이드 토글) -->
+    <div id="tag-filters" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px"></div>
+
+    <div data-render="works"></div>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+
+  <script src="/assets/js/render-works.js"></script>
+  <script>
+    // 렌더된 카드에서 태그를 모아 필터 칩 생성 → 클릭 시 해당 태그만 표시
+    (function () {
+      function build() {
+        var cards = Array.prototype.slice.call(document.querySelectorAll('[data-render="works"] .card'));
+        if (!cards.length) { setTimeout(build, 120); return; }
+        var tagSet = {};
+        cards.forEach(function (c) {
+          (c.getAttribute('data-tags') || '').split(/\s+/).forEach(function (t) {
+            if (t) tagSet[t] = true;
+          });
+        });
+        var tags = Object.keys(tagSet);
+        var wrap = document.getElementById('tag-filters');
+        if (!tags.length) return;
+        var active = '전체';
+        function paint() {
+          cards.forEach(function (c) {
+            var has = active === '전체' || (c.getAttribute('data-tags') || '').split(/\s+/).indexOf(active) !== -1;
+            c.style.display = has ? '' : 'none';
+          });
+          Array.prototype.slice.call(wrap.children).forEach(function (ch) {
+            ch.classList.toggle('active', ch.textContent === active);
+          });
+        }
+        ['전체'].concat(tags).forEach(function (t) {
+          var b = document.createElement('button');
+          b.className = 'chip' + (t === '전체' ? ' active' : '');
+          b.type = 'button';
+          b.textContent = t;
+          b.addEventListener('click', function () { active = t; paint(); });
+          wrap.appendChild(b);
+        });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
+      else build();
+    })();
+  </script>
+</body>
+</html>

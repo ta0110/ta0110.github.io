@@ -1,0 +1,11 @@
+{
+  "categories": [
+    {
+      "name": "Social",
+      "links": [
+        {"label": "GitHub", "url": "https://github.com/ta0110", "icon": "github", "description": null},
+        {"label": "Email", "url": "mailto:tjdals1178@gmail.com", "icon": "mail", "description": null}
+      ]
+    }
+  ]
+}

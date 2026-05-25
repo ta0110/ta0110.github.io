@@ -1,0 +1,19 @@
+{
+  "name": "지성민",
+  "tagline": "데이터로 인사이트를 만듭니다",
+  "bio": "자유롭고 능동적인 업무 수행\n문제 해결의 키는 자율성과 주도적인 접근이라 생각합니다. 지속적인 고민과 자기 동기부여로 높은 품질의 결과물을 끝까지 책임지고 만듭니다.\n\n원활한 커뮤니케이션\n소통 없는 분석은 독자 없는 작가와 같습니다. 존중과 겸손의 태도·질문으로 문제의 본질을 파악하고, 설득력 있는 데이터 해석으로 문제 해결에 기여합니다.\n\n지속적인 개인 발전\n완벽이나 정답이 없는 영역에서, 존중과 겸손을 바탕으로 새로운 사람들과 새로운 도전을 이어가는 것이 저를 끊임없이 성장시킵니다.",
+  "avatar": "/assets/images/avatar.png",
+  "email": "tjdals1178@gmail.com",
+  "location": "Seoul, Korea",
+  "socials": [
+    {"label": "GitHub", "url": "https://github.com/ta0110", "icon": "github"},
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/%EC%84%B1%EB%AF%BC-%EC%A7%80-54983914b/", "icon": "linkedin"},
+    {"label": "Email", "url": "mailto:tjdals1178@gmail.com", "icon": "mail"}
+  ],
+  "seo": {
+    "site_title": "지성민의 포털",
+    "site_description": "지성민의 작품, 노트, 링크 모음",
+    "site_url": "https://ta0110.github.io/my-portal/",
+    "og_image": "/assets/images/og-default.png"
+  }
+}

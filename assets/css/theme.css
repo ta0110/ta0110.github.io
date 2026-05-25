@@ -1,0 +1,33 @@
+:root {
+  /* 색상 */
+  --bg:           #0e0e10;
+  --bg-elevated:  #1a1a1d;
+  --text:         #e8e8e8;
+  --text-muted:   #999;
+  --accent:       #c8a165;       /* 따뜻한 베이지 골드 */
+  --border:       #2a2a2e;
+
+  /* 폰트 */
+  --font-sans:  -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", sans-serif;
+  --font-mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* 간격 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+
+  /* 반응형 컨테이너 */
+  --container-max: 960px;
+  --container-pad: 24px;
+}
+
+[data-theme="light"] {
+  --bg:           #fafaf7;
+  --bg-elevated:  #fff;
+  --text:         #1a1a1a;
+  --text-muted:   #666;
+  --border:       #e5e5e5;
+}
