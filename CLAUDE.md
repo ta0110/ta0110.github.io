@@ -1,6 +1,6 @@
 # 이 레포에 대해
 
-여기는 **지성민의 개인 포털 사이트**(https://ta0110.github.io/my-portal/)입니다.
+여기는 **지성민의 개인 포털 사이트**(https://ta0110.github.io/)입니다.
 
 운영자는 비개발자 또는 가벼운 운영자입니다. 사용자가 자연어로 콘텐츠 추가/수정/배포를 요청하면 Claude 가 자동으로 처리합니다.
 
@@ -19,7 +19,7 @@
 |---|---|
 | "새 작품" / "새 데모" / "작품 추가" | (1) 제목 + 슬러그 묻기 → (2) `templates/new-work.html` → `works/<slug>/index.html` 복사 ({{TITLE}}/{{SLUG}} 치환) → (3) `data/works.json` 의 `works` 배열 맨 앞에 항목 추가 (date=today, featured=false) → (4) "내용 어떻게 채울지 알려주세요" |
 | "새 노트" / "글 추가" / "메모" | (1) 제목 묻기 → (2) 슬러그=`<오늘날짜>-<제목kebab>` 자동 생성 → (3) `templates/new-note.html` → `notes/<slug>/index.html` 복사 ({{TITLE}}/{{SLUG}}/{{DATE}} 치환) → (4) `data/notes.json` 항목 추가 → (5) 본문 어떻게 채울지 묻기 |
-| "발행" / "올려줘" / "배포" | `git add . && git commit -m "<자동 메시지>" && git push` → "1-2분 후 https://ta0110.github.io/my-portal/.../ 에서 보입니다" |
+| "발행" / "올려줘" / "배포" | `git add . && git commit -m "<자동 메시지>" && git push` → "1-2분 후 https://ta0110.github.io/.../ 에서 보입니다" |
 | "링크 추가" | 라벨 + URL + 카테고리 묻기 → `data/links.json` 추가 (없는 카테고리면 새로 만듦) |
 | "프로필 수정" / "한 줄 소개 바꿔" | `data/profile.json` 의 해당 필드 수정 |
 | "톤 / 색상 / 폰트 변경" | `assets/css/theme.css` 의 CSS 변수만 수정 (다른 파일 손대지 말 것) |
@@ -55,7 +55,7 @@ git commit -m "feat: <설명>"
 git push
 ```
 
-→ 1-2분 후 https://ta0110.github.io/my-portal/ 에 반영. 별도 workflow 없음.
+→ 1-2분 후 https://ta0110.github.io/ 에 반영. 별도 workflow 없음.
 
 배포 후 사용자에게: "올렸습니다! 1-2분 후 <URL> 에서 보입니다. 바로 안 보이면 브라우저 강력 새로고침 (Cmd+Shift+R)."
 

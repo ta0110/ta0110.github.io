@@ -2,7 +2,7 @@
 
 지성민의 작품 · 노트 · 링크를 한곳에 모은 개인 포털 사이트의 소스입니다.
 
-- **라이브 사이트**: https://ta0110.github.io/my-portal/
+- **라이브 사이트**: https://ta0110.github.io/
 - 순수 HTML/CSS/JS (빌드 도구·프레임워크 없음), GitHub Pages 호스팅
 - 모든 콘텐츠는 `data/*.json` 에 분리되어 있어, 한 곳만 고치면 사이트에 반영됩니다.
 
