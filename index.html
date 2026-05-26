@@ -196,6 +196,14 @@
 .write-list .wlink:first-child{border-top:none}
 .wlink:hover{color:var(--accent)}
 .wlink .src{flex:none;font-size:10px;color:var(--muted)}
+
+/* === 경진대회 성적 stat === */
+.comp-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.cstat{display:flex;flex-direction:column;align-items:center;min-width:78px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--tint)}
+.cstat b{font-size:16px;font-weight:800;color:var(--text);line-height:1.1}
+.cstat small{font-size:10.5px;color:var(--muted);margin-top:3px}
+.cstat.gold b{color:var(--accent)}
+@media(min-width:621px){.comp-card{align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -208,7 +216,7 @@
       <a href="#experience">경력</a>
       <a href="#projects">프로젝트</a>
       <a href="#pubs">발행 콘텐츠</a>
-      <a href="#extras">경진대회·활동</a>
+      <a href="#extras">경진대회</a>
       <a href="/works/">작품</a>
       <a href="/notes/">노트</a>
       <a href="/links/">링크</a>
@@ -543,18 +551,20 @@
     <div class="brand-card">
       <div class="brand-head">
         <div class="brand-logo"><img src="/assets/images/logo_funda.png" alt="펀다"/></div>
-        <div><div class="brand-name">펀다</div><div class="brand-sub">콘텐츠 기획·제작 지원 · 3편</div></div>
+        <div><div class="brand-name">펀다</div><div class="brand-sub">콘텐츠 기획·제작 지원 · 5편</div></div>
       </div>
       <a class="plink" href="https://www.youtube.com/watch?v=l_o0ts2lT-8" target="_blank" rel="noopener"><span>[유튜브] 자고 일어나면 중형차 생기는 펀다 투자법</span><span class="src">YouTube</span></a>
       <a class="plink" href="https://www.ekn.kr/web/view.php?key=20221108001457218" target="_blank" rel="noopener"><span>코로나로 인한 소상공인 양극화 심화 분석</span><span class="src">에너지경제</span></a>
       <a class="plink" href="https://www.ftoday.co.kr/news/articleView.html?idxno=201071" target="_blank" rel="noopener"><span>소상공인 매출과 코로나19의 상관관계 분석</span><span class="src">파이낸셜투데이</span></a>
+      <a class="plink" href="https://blog.naver.com/fundamaster/222660049551" target="_blank" rel="noopener"><span>세이프플랜 종료 이후의 오해와 불안 1탄 — 부실편</span><span class="src">네이버블로그</span></a>
+      <a class="plink" href="https://blog.naver.com/fundamaster/222667402625" target="_blank" rel="noopener"><span>세이프플랜 종료 이후의 오해와 불안 2탄 — 수익률편</span><span class="src">네이버블로그</span></a>
     </div>
   </div>
 </div></section>
 
 <!-- EXTRAS -->
 <section id="extras"><div class="wrap">
-  <div class="sh"><span class="n">05</span><h2>경진대회 · 활동</h2></div>
+  <div class="sh"><span class="n">05</span><h2>경진대회</h2></div>
   <div class="comp-card">
     <a class="comp-thumb" href="https://www.youtube.com/watch?v=TUwMCZxEzbI" target="_blank" rel="noopener">
       <img src="https://img.youtube.com/vi/TUwMCZxEzbI/hqdefault.jpg" alt="데이콘 인터뷰 영상"/>
@@ -562,29 +572,29 @@
     </a>
     <div class="comp-body">
       <div class="ti">데이콘 「상점 신용카드 매출 예측 경진대회」</div>
-      <div class="de">84개 팀 중 <b>4위</b> · 개인 참가자 중 <b>2위</b> · 2019.08</div>
+      <div class="de">상점의 과거 신용카드 거래 데이터를 바탕으로 향후 매출을 예측하는 회귀 과제. 팀 단위 경쟁에 개인으로 참가해 상위권 성과를 거두었고, 데이콘 인터뷰 영상에 소개되었습니다.</div>
+      <div class="comp-stats">
+        <span class="cstat gold"><b>4위</b><small>84개 팀 중</small></span>
+        <span class="cstat gold"><b>2위</b><small>개인 참가자 중</small></span>
+        <span class="cstat"><b>상위 5%</b><small>전체 순위권</small></span>
+        <span class="cstat"><b>2019.08</b><small>참가 시기</small></span>
+        <span class="cstat"><b>인터뷰</b><small>영상 소개</small></span>
+      </div>
       <div class="comp-links">
-        <a href="https://dacon.io/competitions/official/140472/overview/description" target="_blank" rel="noopener">대회 ↗</a>
+        <a href="https://dacon.io/competitions/official/140472/overview/description" target="_blank" rel="noopener">대회 페이지 ↗</a>
         <a href="https://www.youtube.com/watch?v=TUwMCZxEzbI" target="_blank" rel="noopener">인터뷰 영상 ↗</a>
       </div>
     </div>
-  </div>
-  <div class="act-card">
-    <h4>Activity</h4>
-    <div class="aw"><span class="i">📊</span><div><div class="ti">데이터 기반 의사결정 문화 확산</div><div class="de">분석 결과를 영업·운영·기획 등 비분석 조직이 바로 활용하도록 대시보드·표준 리포트·교육으로 전파.</div></div></div>
-    <div class="aw"><span class="i">✍️</span><div><div class="ti">분석가의 커뮤니케이션 연재</div><div class="de">「숫자 너머의 기술」 시리즈로 분석가의 소통·요구 파악·표현 노하우를 정리.</div></div></div>
   </div>
 </div></section>
 
 <!-- WRITING (발행 글) -->
 <section id="writing"><div class="wrap">
-  <div class="sh-sm"><h3>발행 글</h3><span class="meta">블로그 · 5편</span></div>
+  <div class="sh-sm"><h3>발행 글</h3><span class="meta">블로그 · 3편</span></div>
   <div class="write-list">
     <a class="wlink" href="https://jayden-note.tistory.com/2" target="_blank" rel="noopener"><span>숫자 너머의 기술 #1 — 인내심이 요구되는 설명</span><span class="src">Tistory</span></a>
     <a class="wlink" href="https://jayden-note.tistory.com/3" target="_blank" rel="noopener"><span>숫자 너머의 기술 #2 — 요구 사항의 본질 파악</span><span class="src">Tistory</span></a>
     <a class="wlink" href="https://jayden-note.tistory.com/4" target="_blank" rel="noopener"><span>숫자 너머의 기술 #3 — 명확성과 유연성 사이의 줄타기</span><span class="src">Tistory</span></a>
-    <a class="wlink" href="https://blog.naver.com/fundamaster/222660049551" target="_blank" rel="noopener"><span>세이프플랜 종료 이후의 오해와 불안 1탄 — 부실편</span><span class="src">네이버블로그</span></a>
-    <a class="wlink" href="https://blog.naver.com/fundamaster/222667402625" target="_blank" rel="noopener"><span>세이프플랜 종료 이후의 오해와 불안 2탄 — 수익률편</span><span class="src">네이버블로그</span></a>
   </div>
 </div></section>
 
