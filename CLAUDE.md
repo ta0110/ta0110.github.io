@@ -26,6 +26,8 @@
 | "미리보기" / "지금 어떻게 보여" | 백그라운드로 `python3 -m http.server 8000` 실행 후 http://localhost:8000 안내 |
 | "댓글 / 통계 / 폼 추가" | Giscus / GoatCounter / Formspree 중 선호 묻고 그 서비스 가이드대로 script 추가 |
 | "커스텀 도메인" | (1) 도메인 받기 → (2) 루트에 `CNAME` 파일 생성 → (3) GitHub Settings → Pages → Custom domain 수동 입력 안내 → (4) DNS CNAME 가이드 |
+| "초안" / "일단 적어둬" / "아직 올리지 마" | `drafts/<날짜>-<제목>.md` 에 자유 형식으로 저장. `data/*.json` 은 건드리지 않음 (사이트에 안 보임) |
+| "초안 발행" / "이거 올리자" | `drafts/` 의 해당 글 → 위 "새 노트" 절차로 변환 → 원본 초안 파일은 사용자 확인 후에만 삭제 |
 
 ## 파일 규칙
 
@@ -36,6 +38,8 @@
 - 색상/폰트 변경은 `assets/css/theme.css` 의 CSS 변수만
 - 새 페이지의 `<head>` 는 `partials/head-meta.html` 블록을 복사해서 만든다 (스크립트는 fetch 주입이 안 되므로 각 페이지에 직접 둠). title / description / og / canonical 만 페이지별로 바꾼다
 - 새 JS 파일 추가 시 반드시 `assets/js/` 하위, ES module 아닌 일반 스크립트로
+- 이미지는 용도별로: 노트 본문용 `assets/images/notes/`, 작품용 `assets/images/works/`, 사이트 공용(아바타·로고·og) `assets/images/` 바로 아래
+- `drafts/` 는 발행 전 초안 전용 (`.gitignore` 처리, 사이트·GitHub 모두 미반영). 여기 있는 파일은 `data/*.json` 에 등록하지 않는다
 - 빌드 도구 / 프레임워크 도입 금지 (webpack, vite, npm install, React, Vue, Next 등)
 - `data/*.json` 스키마: 필드 추가는 OK, 기존 필드 삭제는 사용자 명시적 동의 후
 

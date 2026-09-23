@@ -7,3 +7,10 @@ node_modules/
 .vscode/
 .idea/
 *.log
+
+# 발행 전 초안 (로컬 전용, 사이트에 올라가지 않음)
+drafts/
+
+# 도구가 만드는 작업 파일
+.omc/
+.claude/settings.local.json
